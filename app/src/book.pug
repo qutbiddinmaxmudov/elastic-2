@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+  include layout/head.pug
+  body
+    include layout/nav.pug
+    +nav('book')
+    main.book
+      .container
+        h1.book__title Welcome to the booking page!
+        p.book__subtitle Kindly provide necessary informations by attending to the questions below.
+      form(action="").container
+        .book__nav
+        h2.book__nav-title What you booking for? 
+        p.book__nav-description (you can select multiple options)
+        .book__nav-list
+          each item in [{id:'engagement', text:'Engagement'},{id:'business', text:'Business event'},{id:'wedding', text:'Wedding'},{id:'birthday', text:'Birthday'},{id:'maternity', text:'Maternity'},{id:'graduation', text:'Graduation'},{id:'product', text:'Product'},{id:'honeymoon', text:'Honeymoon'},{id:'fashion', text:'Fashion'},{id:'anniversary', text:'Anniversary'},{id:'food', text:'Food'},{id:'conference', text:'Conference'},{id:'team', text:'Team and workspace'},{id:'personal', text:'Personal Potrait'},{id:'family', text:'Family'},{id:'travel', text:'Travel shoot'},{id:'baby', text:'Baby'},{id:'others', text:'Others'}]
+            .book__nav-item
+              input(type="checkbox" name=item.text id=item.id).book__nav-check 
+              label(for=item.id).book__nav-label= item.text
