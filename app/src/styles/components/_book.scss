@@ -1,5 +1,6 @@
 .book {
   padding-top: 115px;
+
   &__title {
     font-weight: 600;
     font-size: 36px;
@@ -40,11 +41,11 @@
       justify-content: center;
       flex-wrap: wrap;
     }
-    
-    &-check{
+
+    &-check {
       display: none;
-      
-      &:checked + .book__nav-label{
+
+      &:checked+.book__nav-label {
         background: $gold;
         color: $white;
       }
@@ -69,5 +70,140 @@
       cursor: pointer;
       transition: 0.4s;
     }
+  }
+}
+
+.photoshoot {
+  margin-top: 100px;
+
+  &__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+  
+  &__catalog{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  &__border{
+    width: 100%;
+    max-width: 330px;
+    padding: 10px 16px;
+    border: 2px $gold solid;
+    display: flex;
+    align-items: center;
+    height: 56px;
+    position: relative;
+  }
+  
+  &__legend{
+    font-family: $robo;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    color: $black;  
+    left: 19px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    background: white;
+    padding-left: 8px;
+    padding-right: 5px;
+  }
+  
+  &__input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    font-family: $robo;
+    
+    &::placeholder{
+      font-family: $robo;
+      font-size: 16px;
+      line-height: 24px;
+      color: rgba(0, 0, 0, 0.87);
+      opacity: 0.6;
+      letter-spacing: 0.15px;
+    }
+  }
+}
+
+.package{
+  margin-top: 100px;
+  &__title{
+    font-weight: 600;
+    font-size: 24px;
+    color: $black;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  &__catalog{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  &__radio{
+    display: none;
+    
+    &:checked + .package__item{
+      border-color: $gold;
+    }
+  }
+  &__border{
+    width: 25%;
+    display: flex;
+  }
+  &__item{
+    border: 1px solid $black;
+    width: 100%;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+  }
+  
+  &__name{
+    font-size: 21px;
+    color: $black;
+    font-weight: 600;
+  }
+  
+  &__price{
+    font-weight: 600;
+    color: $black;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  &__info{
+    color: $black;
+  }
+  
+  &__button{
+    width: 105px;
+    height: 43px;
+    background: $gold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: $white;
+    margin-top: 30px;
+    cursor: pointer;
+    
   }
 }
