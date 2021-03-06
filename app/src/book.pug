@@ -31,7 +31,7 @@ html(lang="en")
           h2.package__title Select your preffered package
           .container.package__catalog 
             .package__border
-              input(type="radio" name="package" id="basic" value="Basic").package__radio
+              input(type="radio" name="Basic" id="basic").package__radio
               .package__item 
                 p.package__name Basic
                 p.package__price
@@ -43,7 +43,7 @@ html(lang="en")
                  p.package__info=info
                 label(for="basic").package__button Select
             .package__border
-              input(type="radio" name="package" id="standard" value="Standard").package__radio
+              input(type="radio" name="Standard" id="standard").package__radio
               .package__item 
                 p.package__name Standard
                 p.package__price
@@ -55,7 +55,7 @@ html(lang="en")
                  p.package__info=info
                 label(for="standard").package__button Select
             .package__border
-              input(type="radio" name="package" id="premium" value="Premium").package__radio
+              input(type="radio" name="Premium" id="premium").package__radio
               .package__item 
                 p.package__name Premium
                 p.package__price
@@ -71,16 +71,17 @@ html(lang="en")
           .details__form 
             fieldset.details__border
               legend.details__legend Name
-              input(placeholder="Enter full name" type="text").details__input
+              input(placeholder="Enter full name" type="text" name="fullName").details__input
             fieldset.details__border
               legend.details__legend Phone number
-              input(placeholder="Enter phone number" type="tel").details__input
+              input(placeholder="Enter phone number" type="tel" name="phoneNumber").details__input
             fieldset.details__border
               legend.details__legend Email
-              input(placeholder="Enter email address" type="email").details__input
+              input(placeholder="Enter email address" type="email" name="emailAddress").details__input
         .book__buttons 
           button.book__send Book now
           button.book__save(type="reset") Save and book later 
           
     include layout/footer.pug
+    script(src="scripts/book.js") 
      

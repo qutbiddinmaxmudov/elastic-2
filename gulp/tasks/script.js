@@ -7,7 +7,6 @@ module.exports = ()=>
     .pipe($.gp.babel({
       presets: ['@babel/preset-env']
     }))
-    .pipe($.gp.rename('common.min.js'))
     .pipe($.gp.sourcemaps.write())
     .pipe($.gulp.dest($.path.build.js).on('end',$.bs.reload)):
     $.gulp.src($.path.src.js)
@@ -15,5 +14,4 @@ module.exports = ()=>
     .pipe($.gp.babel({
       presets: ['@babel/preset-env', 'minify']
     }))
-    .pipe($.gp.rename('common.min.js'))
     .pipe($.gulp.dest($.path.build.js)))

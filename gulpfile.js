@@ -9,7 +9,7 @@ global.$ = {
     src: {
       html: './app/src/*.{html,pug}',
       css: './app/src/styles/*.scss',
-      js: './app/src/scripts/main.js',
+      js: './app/src/scripts/*.js',
       img: './app/src/images/*.{png,jpg,webp}',
       font: './app/src/fonts/**/*.ttf'
       },
