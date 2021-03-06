@@ -71,6 +71,37 @@
       transition: 0.4s;
     }
   }
+
+  &__buttons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__send,
+  &__save {
+    height: 60px;
+    background: $gold;
+    transition: 0.5s;
+    border: 2px solid #CCAF40;
+    border-radius: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    margin: 0 15px;
+    outline: none;
+    
+    &:hover{
+      background: $white;
+      color: $gold;
+      cursor: pointer;
+    }
+  }
+
 }
 
 .photoshoot {
@@ -84,15 +115,15 @@
     color: $black;
     margin-bottom: 20px;
   }
-  
-  &__catalog{
+
+  &__catalog {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  
-  &__border{
+
+  &__border {
     width: 100%;
     max-width: 330px;
     padding: 10px 16px;
@@ -102,12 +133,12 @@
     height: 56px;
     position: relative;
   }
-  
-  &__legend{
+
+  &__legend {
     font-family: $robo;
     font-size: 12px;
     letter-spacing: 0.4px;
-    color: $black;  
+    color: $black;
     left: 19px;
     position: absolute;
     top: 0;
@@ -116,16 +147,16 @@
     padding-left: 8px;
     padding-right: 5px;
   }
-  
-  &__input{
+
+  &__input {
     width: 100%;
     border: none;
     outline: none;
     background: none;
     font-size: 16px;
     font-family: $robo;
-    
-    &::placeholder{
+
+    &::placeholder {
       font-family: $robo;
       font-size: 16px;
       line-height: 24px;
@@ -136,40 +167,43 @@
   }
 }
 
-.package{
+.package {
   margin-top: 100px;
-  &__title{
+
+  &__title {
     font-weight: 600;
     font-size: 24px;
     color: $black;
     text-align: center;
     margin-bottom: 30px;
   }
-  
-  &__catalog{
+
+  &__catalog {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
   }
-  
-  &__radio{
+
+  &__radio {
     display: none;
-    
-    &:checked + .package__item{
+
+    &:checked+.package__item {
       border-color: $gold;
     }
-    
-    &:checked + .package__item .package__button{
+
+    &:checked+.package__item .package__button {
       color: $gold;
       background: transparent;
       border-color: $gold;
     }
   }
-  &__border{
+
+  &__border {
     width: 25%;
     display: flex;
   }
-  &__item{
+
+  &__item {
     border: 1px solid $black;
     width: 100%;
     padding: 30px 15px;
@@ -179,25 +213,25 @@
     justify-content: space-between;
     transition: 0.5s;
   }
-  
-  &__name{
+
+  &__name {
     font-size: 21px;
     color: $black;
     font-weight: 600;
   }
-  
-  &__price{
+
+  &__price {
     font-weight: 600;
     color: $black;
     font-size: 30px;
     margin-bottom: 10px;
   }
-  
-  &__info{
+
+  &__info {
     color: $black;
   }
-  
-  &__button{
+
+  &__button {
     width: 105px;
     height: 43px;
     background: $gold;
@@ -212,5 +246,53 @@
     cursor: pointer;
     transition: 0.5s;
     border: 1px solid transparent;
+  }
+}
+
+.details {
+  margin-top: 100px;
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    color: $black;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__border {
+    border: 2px $gold solid;
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    padding-top: 8px;
+  }
+
+  &__legend {
+    font-family: $robo;
+    font-size: 12px;
+    color: $black;
+    letter-spacing: 0.4px;
+    padding: 0 5px;
+  }
+
+  &__input {
+    border: none;
+    outline: none;
+    border-left: 1px solid #7A7A7A;
+    padding-left: 2px;
+
+    &::placeholder {
+      letter-spacing: 0.15px;
+      color: rgba(0, 0, 0, 0.87);
+      mix-blend-mode: normal;
+      opacity: 0.6;
+    }
   }
 }

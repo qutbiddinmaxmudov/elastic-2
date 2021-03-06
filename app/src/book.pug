@@ -8,7 +8,7 @@ html(lang="en")
       .container
         h1.book__title Welcome to the booking page!
         p.book__subtitle Kindly provide necessary informations by attending to the questions below.
-      form(action="").container
+      form(action="")#book.container
         .book__nav
         h2.book__nav-title What you booking for? 
         p.book__nav-description (you can select multiple options)
@@ -66,4 +66,21 @@ html(lang="en")
                 each info in ['3 hours shoot','Unlimited photos','Editing included','Free photobook']
                  p.package__info=info
                 label(for="premium").package__button Select
-                
+        .details
+          h2.details__title Kindly provide your contact details
+          .details__form 
+            fieldset.details__border
+              legend.details__legend Name
+              input(placeholder="Enter full name" type="text").details__input
+            fieldset.details__border
+              legend.details__legend Phone number
+              input(placeholder="Enter phone number" type="tel").details__input
+            fieldset.details__border
+              legend.details__legend Email
+              input(placeholder="Enter email address" type="email").details__input
+        .book__buttons 
+          button.book__send Book now
+          button.book__save(type="reset") Save and book later 
+          
+    include layout/footer.pug
+     
